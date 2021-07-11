@@ -4,6 +4,7 @@ import TableItem from "./table-item";
 
 const Table = (props) => {
 
+
     return(
         <div className='starNavi__workZone-table'>
 
@@ -12,13 +13,15 @@ const Table = (props) => {
                     return <><TableItem
                         active={p.active}
                         id={p.id}
-                        setSelectorStatus={props.setSelectorStatus}/><br /></>
+                        setSelectorStatus={props.setSelectorStatus}
+                        removeSelectorStatus={props.removeSelectorStatus}/><br /></>
                 }
                 else {
-                        return <TableItem
-                            active={p.active}
-                            id={p.id}
-                            setSelectorStatus={props.setSelectorStatus}/>
+                    return <TableItem
+                        active={p.active}
+                        id={p.id}
+                        setSelectorStatus={props.setSelectorStatus}
+                        removeSelectorStatus={props.removeSelectorStatus}/>
                 }
             })}
 

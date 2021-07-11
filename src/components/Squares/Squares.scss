@@ -1,9 +1,26 @@
 @import '../../assets/css-variables';
 
-.starNavi__workZone {
-  margin-bottom: 20px;
+.starNavi__hoverSquares {
+  font-weight: bold;
 
-  @media ($lg) {
-    margin-bottom: 20px;
+  h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .starNavi__hoverSquares-item {
+
+    p {
+      display: inline-block;
+      font-size: 1rem;
+      background-color: #fbf8e3;
+      color: #a28b5f;
+      margin-bottom: 10px;
+      padding: 1rem;
+      min-width: 200px;
+      border-radius: .2rem;
+      border: solid 1px #eeebd7;
+    }
   }
 }

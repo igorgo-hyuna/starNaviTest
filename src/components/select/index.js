@@ -1,2 +1,2 @@
-import Squares from './Squares.js';
-export default Squares;
+import Select from './Select.js';
+export default Select;

@@ -1,17 +1,24 @@
 import React from 'react';
 import './Squares.scss';
+import {connect} from "react-redux";
+import Squares from "./Squares";
 
-const Squares = () => {
+class SquaresContainer extends React.Component{
 
-    return(
-        <>
-            <h1>Hover squares</h1>
-            <div className='starNavi__hoverSquares-item'><p>row 2 col 1</p></div>
-            <div className='starNavi__hoverSquares-item'><p>row 2 col 1</p></div>
-            <div className='starNavi__hoverSquares-item'><p>row 2 col 1</p></div>
-            <div className='starNavi__hoverSquares-item'><p>row 2 col 1</p></div>
-        </>
-    );
+    render() {
+        return (
+            <Squares
+                sectorsArray={this.props.sectorsArray}
+                fieldSize={this.props.fieldSize}/>
+        );
+    }
+}
+
+let mapStateToProps = (state) => {
+    return{
+        sectorsArray: state.workZone.sectorsArray,
+        fieldSize: state.workZone.fieldSize
+    }
 };
 
-export default Squares;
+export default connect(mapStateToProps, {})(SquaresContainer);
